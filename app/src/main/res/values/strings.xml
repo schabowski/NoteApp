@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Bogate notatki</string>
+    <string name="settings">Ustawienia</string>
+    <string name="save">Zapisz</string>
+    <string name="extraConfig">Ustawienia dodatkowe</string>
+    <string name="title">Tytuł</string>
+    <string name="description">Treść</string>
+</resources>
