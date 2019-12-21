@@ -1,31 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/singleNote"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:paddingStart="8dp"
     android:paddingTop="5dp"
-    android:paddingBottom="5dp"
-    android:paddingRight="5dp"
-    android:paddingLeft="8dp">
+    android:paddingEnd="5dp"
+    android:paddingBottom="5dp">
 
-    <TextView
-        android:id="@+id/noteTitle"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="2"
-        android:paddingTop="10dp"
-        android:singleLine="true"
-        android:text="Name"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/noteText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxLines="6"
-        android:text="Text" />
+        <TextView
+            android:id="@+id/noteTitle"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/isPinned"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/isPinned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/is_pinned"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/noteTitle"
+            app:srcCompat="@drawable/ic_bookmark_border_grey_24dp" />
+
+        <TextView
+            android:id="@+id/noteText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="6"
+            app:layout_constraintEnd_toEndOf="@+id/noteTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 </LinearLayout>

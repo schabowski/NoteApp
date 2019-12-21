@@ -1,7 +1,6 @@
 package dev.chabowski.richnotes;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import dev.chabowski.richnotes.models.Note;
 
 public class NoteListAdapter extends BaseAdapter {
     private Context context;
@@ -52,9 +53,6 @@ public class NoteListAdapter extends BaseAdapter {
 
         int stroke;
         switch(currentNote.priority){
-            case 0:
-                stroke = R.drawable.stroke;
-                break;
             case 1:
                 stroke = R.drawable.stroke_priority_normal;
                 break;

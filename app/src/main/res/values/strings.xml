@@ -5,4 +5,13 @@
     <string name="extraConfig">Ustawienia dodatkowe</string>
     <string name="title">Tytuł</string>
     <string name="description">Treść</string>
+    <string name="priority">Priorytet</string>
+    <string name="is_pinned">Notatka przypięta</string>
+    <string name="alarm_date">Data alarmu</string>
+    <string name="is_alarm_enabled">Alarm włączony</string>
+    <string name="secret_note">Notatka sekretna</string>
+
+    <string name="low">Niski</string>
+    <string name="normal">Normalny</string>
+    <string name="high">Wysoki</string>
 </resources>
